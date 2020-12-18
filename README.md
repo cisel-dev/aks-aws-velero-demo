@@ -9,7 +9,7 @@ This repo host different code about the usage of Velero in Azure and AWS
 
 | <a href="https://www.cisel.ch" target="_blank">**CISEL**</a> | <a href="https://www.cisel.ch" target="_blank">**CISEL**</a> | <a href="https://www.cisel.ch" target="_blank">**CISEL**</a> |
 | :---: |:---:| :---:|
-| FCA | SME | QBA |
+| FCA | QBA | SME |
 
 ---
 
