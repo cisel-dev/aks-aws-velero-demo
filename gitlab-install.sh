@@ -1,12 +1,11 @@
-#! /bin/bash
 ################################################################################################################
 # GITLAB
 ################################################################################################################
 
 openssl req -x509 -newkey rsa:4096 -sha256 -nodes -keyout tlsgitlab.key -out tlsgitlab.crt -subj "/CN=gitlab.example.com" -days 365
-kubectl create ns gitlab
 kubectl -n gitlab create secret tls gitlab-example-com --cert=tlsgitlab.crt --key=tlsgitlab.key
-kubectl create secret generic storage-config --from-file=config=gitlab_bucket.s3cfg --namespace=gitlab
+
+kubectl create ns gitlab
 
 # GitLab Installation via Helm
 helm --namespace gitlab install gitlab gitlab/gitlab \
