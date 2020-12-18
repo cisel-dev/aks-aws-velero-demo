@@ -1,4 +1,4 @@
-BUCKET=velero-01
+BUCKET=velero-bucket-01
 REGION=eu-west-3
 aws s3api create-bucket \
     --bucket $BUCKET \
