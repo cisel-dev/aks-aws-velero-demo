@@ -24,6 +24,6 @@ helm --namespace gitlab install gitlab gitlab/gitlab \
 
 # Get GitLab web root password
 kubectl -n gitlab get secret gitlab-gitlab-initial-root-password -ojsonpath='{.data.password}' | base64 --decode ; echo
-# Annotate pods for Velero PV Backup with restic
+# Annotate pods to allow Velero to backup their PV with restic
 kubectl annotate pod/gitlab-postgresql-0 backup.velero.io/backup-volumes=data -n gitlab
 kubectl annotate pod/gitlab-gitaly-0 backup.velero.io/backup-volumes=repo-data -n gitlab
