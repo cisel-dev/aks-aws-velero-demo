@@ -1,4 +1,4 @@
-BUCKET=velero-bucket-01
+BUCKET=velero-01
 REGION=eu-west-3
 velero install \
     --provider aws \
