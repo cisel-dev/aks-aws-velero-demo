@@ -14,3 +14,9 @@ aws iam put-user-policy \
 
 
 aws iam create-access-key --user-name velerouser01
+
+# Create a Velero-specific credentials file named "credentials-velero" in your current directory:
+# [default]
+# aws_access_key_id=XYZ
+# aws_secret_access_key=XYZ
+
